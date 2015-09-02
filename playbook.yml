@@ -2,7 +2,7 @@
 - hosts: localhost
   roles:
     - homebrew-cask
-    - { role: vagrant, plugins: ['landrush']}
+    - { role: vagrant, plugins: ['vagrant-cachier','vagrant-hostmanager']}
     - { role: oh-my-zsh, plugins: "git"}
     - git
 
@@ -12,9 +12,6 @@
 
   vars:
     applications:
-      - adium
-      - dropbox
-      - owncloud
       - skype
       - vagrant-manager
 
